@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화재 진압 로봇 관제 시스템 v2</title>
+  <link rel="stylesheet" href="/style.css">
+
+  </head><body>
+
+  <!-- 평상시 보여줄 순찰 모드 화면 -->
+  <div id="patrol-view">
+    <h1>화재 감시 로봇</h1>
+    <div class="status-box">
+      <h2>상태: 순찰 대기</h2>
+      <p>아래 버튼을 눌러 자율 순찰을 시작하세요.</p>
+      <button id="btn-patrol" class="patrol-btn">순찰 시작</button>
+      <div class="spinner" style="display: none;"></div>
+    </div>
+  </div>
+
+  <!-- 화재 감지 시 보여줄 원격 제어 화면 -->
+  <div id="control-view" style="display: none;">
+    <header>
+      <h1>화재 감지! 원격 제어 모드</h1>
+    </header>
+
+    <main class="container">
+      <section class="section-box video-box">
+        <h2>실시간 영상</h2>
+        <!-- 영상 스트림 주소, 포트는 파이썬 스트리머와 일치해야 함 -->
+        <img id="webcam-stream" src="http://127.0.0.1:8000/video_feed" alt="Webcam Stream">
+      </section>
+
+      <section class="section-box">
+        <h2>조이스틱</h2>
+        <div class="joystick-area">
+          <canvas id="joystickCanvas" width="200" height="200"></canvas>
+        </div>
+        <div class="control-buttons">
+          <button id="btn-stop" class="stop-btn">소화</button>
+          <button id="btn-false-alarm" class="false-alarm-btn">오경보 (순찰 복귀)</button>
+          <button id="btn-resume-patrol" class="resume-btn">소화 확인 (순찰 재개)</button>
+        </div>
+        <div id="fireStatus" class="fire-status-alert"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Socket.IO 클라이언트 라이브러리 -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- 커스텀 클라이언트 스크립트 -->
+  <script src="/client_v2.js"></script> <!-- client_v2.js 로드 -->
+</body>
+</html>

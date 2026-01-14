@@ -67,15 +67,18 @@
 ##  Results & UI 
 ### 1. 웹 UI – 순찰 대기 
 
-<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/448a349d-1379-40eb-a235-aa01237b98d0" />
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/1045a77e-6f25-4bd5-b0f6-272bcbcdfca6" />
+
 
 ### 2. 웹 UI – 자율 순찰 
 
-<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/6b7609ae-039f-4e12-b9e2-c21e8815ccf8" />
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/8e182217-daf5-4629-a5b2-424da10e538c" />
+
 
 ### 3. 웹 UI – 화재 감지 후 원격 제어 
 
-<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/c0fe51a6-6502-4d54-9adb-7f3521d50aeb" />
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/251f6f02-2458-4a26-bff0-bfd22d50fa24" />
+
 
 
 ---
@@ -83,18 +86,19 @@
 ##  동작 영상 
 ### 1. 화재 감시
 
-<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/d8683d90-2972-4d5f-8d06-74b3e9898ba5" />
+<img src="images/video_fire_detection.gif" width="400" height="280" />
 
 ### 2. 소화 동작
 
-<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/bb364d72-ca1d-496d-8583-8699147e831a" />
+<img src="images/video_extinguish.gif" width="400" height="280" />  
 
 ### 3. 순찰 복귀 
 
-<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/f6726440-0494-42b1-9b82-c19f8f5368fe" />
+ <img src="images/video_patrol_resume.gif" width="400" height="280" /> 
 
  ---
 
 ##  Future Plan
-* **RTOS Migration:** 현재의 `while(1)` 슈퍼 루프 구조를 **FreeRTOS** 기반의 멀티태스킹 구조로 변경하여, 통신과 제어 태스크의 실시간성을 더욱 강화할 예정입니다.
-* **AI Vision Integration:** 기존 IR 센서 방식의 한계를 보완하기 위해, NPU가 탑재된 보드로 마이그레이션하여 카메라 기반의 화재 인식(YOLO-Lite) 기능을 추가할 계획입니다.
+- **RTOS 적용:** FreeRTOS 기반으로 태스크 분리 → 안정성과 실시간성 강화
+- - **보드 업그레이드:** STM32F4 등 상위 MCU로 교체 → 성능 및 주변장치 확장
+- - **센서 개선:** 불꽃 센서 외 온도/연기 센서 병합 → 오탐지 감소

@@ -62,6 +62,38 @@
 * **해결 (Solution):**
     * **무선 스트리밍 전환:** 고가의 무선 카메라 모듈 대신, 안 쓰는 스마트폰과 **'Iriun Webcam'** 어플리케이션을 활용하여 비용 효율적인 무선 영상 전송 시스템 구축.
     * **결과:** 케이블의 제약 없이 Wi-Fi가 닿는 모든 구역으로 순찰 범위를 확장하였으며, 실시간 모니터링 지연(Latency) 문제도 테스트를 통해 안정적인 수준임을 확인함.
+  
+--- 
+##  Results & UI 
+### 1. 웹 UI – 순찰 대기 
+
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/448a349d-1379-40eb-a235-aa01237b98d0" />
+
+### 2. 웹 UI – 자율 순찰 
+
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/6b7609ae-039f-4e12-b9e2-c21e8815ccf8" />
+
+### 3. 웹 UI – 화재 감지 후 원격 제어 
+
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/c0fe51a6-6502-4d54-9adb-7f3521d50aeb" />
+
+
+---
+
+##  동작 영상 
+### 1. 화재 감시
+
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/d8683d90-2972-4d5f-8d06-74b3e9898ba5" />
+
+### 2. 소화 동작
+
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/bb364d72-ca1d-496d-8583-8699147e831a" />
+
+### 3. 순찰 복귀 
+
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/f6726440-0494-42b1-9b82-c19f8f5368fe" />
+
+ ---
 
 ##  Future Plan
 * **RTOS Migration:** 현재의 `while(1)` 슈퍼 루프 구조를 **FreeRTOS** 기반의 멀티태스킹 구조로 변경하여, 통신과 제어 태스크의 실시간성을 더욱 강화할 예정입니다.
